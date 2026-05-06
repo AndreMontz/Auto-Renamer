@@ -1,58 +1,52 @@
 # Auto-Renamer
-Auto Renamer is a productivity utility that organizes images and GIFs in real-time. Operating in the background, it adds sequential numbering to original filenames as they enter a folder. It features independent directory counters, a recent history log, custom folder groups, and starts automatically with Windows.
 
-This is a background utility for Windows that monitors a selected folder and automatically renames any new image added to it. The program adds a sequential number to the beginning of the original filename (e.g., image.png becomes 1-image.png).
+O Auto-Renamer é um utilitário de produtividade que organiza imagens e GIFs em tempo real. Operando em segundo plano, ele adiciona uma numeração sequencial aos nomes originais dos arquivos conforme eles entram em uma pasta. 
 
-Ideal for those who download many images and need to keep them organized chronologically by arrival time, without losing the original filename.
+Ideal para quem baixa muitas imagens e precisa mantê-las organizadas cronologicamente por ordem de chegada, sem perder o nome original do arquivo (por exemplo, `image.png` se torna `1-image.png`).
 
-Features
-Invisible Operation: Runs silently in the system tray (near the Windows clock). No open windows to interrupt your workflow.
+---
 
-Auto-Start: Starts with Windows so you don't have to remember to open it every day.
+## Funcionalidades
 
-Multiple Counters: The program remembers where it left off in each folder independently.
+* **Operação Invisível:** Roda silenciosamente na bandeja do sistema do Windows. Nenhuma janela aberta para interromper seu fluxo de trabalho.
+* **Auto-Start:** Inicia automaticamente com o Windows para que você não precise se lembrar de abri-lo todos os dias.
+* **Múltiplos Contadores:** O programa possui memória independente, lembrando exatamente em qual número parou em cada diretório diferente.
+* **History (Recent):** Salva as últimas 10 pastas utilizadas para que você possa alternar rapidamente entre elas.
+* **Organizational Groups:** Permite salvar e categorizar suas pastas favoritas em grupos personalizados para fácil acesso futuro.
+* **Portátil (Standalone):** Não requer instalação do Python ou de bibliotecas extras. Basta executar o arquivo `.exe`.
 
-History (Recent): Saves the last 10 used folders for quick switching.
+---
 
-Organizational Groups: Allows you to save your favorite folders into custom categories for easy future access.
+## Como Usar
 
-Portable (Standalone): Does not require Python or extra libraries to be installed. Just run the .exe.
+1. Coloque o arquivo `auto-renamer.exe` em uma pasta de sua escolha.
+2. Dê um duplo clique no arquivo para executá-lo.
+3. Observe a bandeja do sistema do Windows (canto inferior direito, perto do relógio) e procure por um ícone verde com a letra "R".
+4. Clique com o botão direito no ícone para abrir o menu.
+5. Selecione a opção **Select Folder** e escolha a pasta onde você fará os downloads ou salvará suas imagens.
+6. Pronto! A partir de agora, qualquer imagem salva nessa pasta será numerada automaticamente na ordem em que chegar.
 
-How to Use
-Place the auto-renamer.exe file in a folder of your choice.
+---
 
-Double-click the file to open it.
+## Entendendo o Menu
 
-Look at the Windows system tray (bottom right corner, near the clock) and look for a green icon.
+Ao clicar com o botão direito no ícone do programa, você terá acesso às seguintes opções:
 
-Right-click the icon to open the menu.
+* **Folder in use / Next number:** Mostra o status atual para que você saiba para qual pasta as imagens estão sendo direcionadas e qual será o próximo número aplicado.
+* **Select Folder:** Abre o explorador de arquivos para você alterar a pasta que está sendo monitorada.
+* **Reset Counter:** Zera a contagem da pasta atual, fazendo com que a próxima imagem volte a receber o número 1.
+* **Recent:** Um atalho para acessar rapidamente o histórico de pastas utilizadas. Inclui a opção de limpar este histórico.
+* **Groups:** 
+    * Use a opção **Save Folder to a Group** para criar categorias (ex.: "Referências", "Memes") e fixar a pasta atual nelas.
+    * Através dos submenus, você pode acessar rapidamente as pastas salvas, além de renomear ou excluir os grupos.
+* **Language:** Permite alternar o idioma do programa (Português/English).
+* **Exit:** Encerra o programa completamente.
 
-Select Select Folder and choose the folder where you will download or save your images.
+---
 
-Done! From now on, any image saved in that folder will be automatically numbered in the order it arrives.
+## Notas Técnicas
 
-Understanding the Menu
-Right-clicking the icon will display the following options:
+* **Extensões Suportadas:** O programa reconhece e renomeia automaticamente arquivos com as seguintes extensões: `.png`, `.jpg`, `.jpeg`, `.gif`, `.bmp`, `.webp` e `.tiff`.
+* **Arquivo de Configuração:** Ao ser executado pela primeira vez, o programa criará automaticamente um arquivo chamado `config_renamer.json` no mesmo diretório em que o `auto-renamer.exe` estiver localizado. Este arquivo armazena os seus contadores, histórico de pastas, grupos e preferência de idioma. **Não exclua este arquivo**, ou o programa perderá todo o progresso de numeração salvo.
 
-Folder in use / Next number: Shows the current status so you know where images are being routed and what the next file number will be.
-
-Select Folder: Opens the file explorer so you can change the monitoring destination.
-
-Reset Counter: Resets the current folder's count back to number 1.
-
-Recent: A quick shortcut to return to folders you've used recently. Includes an option to clear this history.
-
-Groups:
-
-Use Save Folder to a Group to create a category (e.g., "Art References", "Memes") and pin the current folder there.
-
-You can access saved folders, rename groups, or delete them through the submenus.
-
-Exit: Closes the program completely.
-
-Technical Notes
-Supported Extensions: The program automatically recognizes and renames files with the following extensions: .png, .jpg, .jpeg, .gif, .bmp, .webp, and .tiff.
-
-Configuration File: When run for the first time, the program will create a file named config_renamer.json in the same directory as the .exe. This file stores your counters, history, and groups. Do not delete this file, otherwise, the program will lose track of its numbering progress.
-
-Tip: If you want to temporarily pause the program without closing it, simply create an empty temporary folder and select it in the program, or just click Exit and reopen it later.
+> **Dica de Uso:** Caso queira pausar o monitoramento do programa temporariamente sem precisar fechá-lo, basta criar uma pasta vazia em qualquer lugar, selecioná-la através do botão **Select Folder** e deixá-la inativa. Alternativamente, clique em **Exit** e abra o programa novamente apenas quando precisar.
