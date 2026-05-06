@@ -19,7 +19,7 @@ Organizational Groups: Allows you to save your favorite folders into custom cate
 Portable (Standalone): Does not require Python or extra libraries to be installed. Just run the .exe.
 
 How to Use
-Place the auto-ranamer.exe file in a folder of your choice.
+Place the auto-renamer.exe file in a folder of your choice.
 
 Double-click the file to open it.
 
